@@ -1,25 +1,39 @@
 package Task_1.Model;
 
-//Здесь представлена реализация принципа DIP
-public class User {
-    UniversityPerson universityPerson;
+public abstract class User { //Здесь соблюдается принцип SRP
+    private String firstName;
+    private String secondName;
+    private String lastName;
 
-    public User(UniversityPerson universityPerson) {
-        this.universityPerson = universityPerson;
+    public User(String firstName, String secondName, String lastName) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.lastName = lastName;
     }
 
-    public void showPerson() {
-        universityPerson.showPerson();
+
+    public String getFirstName() {
+        return firstName;
     }
 
-    public UniversityPerson getUniversityPerson() {
-        return universityPerson;
+    public String getSecondName() {
+        return secondName;
     }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    //Этот абстрактный метод позволяет продемонстрировать соблюдение принципа LSP,
+    //поскольку его реализация осуществляется классом наследником.
+    public abstract void showPerson();
 
     @Override
     public String toString() {
         return "User{" +
-                "universityPerson=" + universityPerson +
+                "firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
