@@ -2,13 +2,15 @@ package Task_1.Controller;
 
 import Task_1.Model.Student;
 import Task_1.Model.StudentGroup;
+import Task_1.Model.User;
 import Task_1.Service.StudentGroupService;
-import Task_1.Controller.UniversityPersonController;
+import Task_1.Controller.UserController;
 import Task_1.View.StudentView;
+import Task_1.View.ViewUser;
 
 import java.util.ArrayList;
 
-public class StudentController implements UniversityPersonController<Student> {
+public class StudentController implements UserController<Student> {
     //Здесь наглядно продемонстрирован принцип OSP,
 //Данный класс реализует методы интерфейса UserController и расширяет его возможности новыми методами
 
@@ -16,6 +18,8 @@ public class StudentController implements UniversityPersonController<Student> {
     private StudentGroup students = new StudentGroup(new ArrayList<>());
     private StudentGroupService service = new StudentGroupService(students);
     private StudentView studentView = new StudentView();
+    private ViewUser viewUser;
+
 
 
     @Override
@@ -27,10 +31,19 @@ public class StudentController implements UniversityPersonController<Student> {
         students.addStudent(student);
     }
 
+    public Student getStudent(int studentId){
+        return students.getStudentList().get(studentId);
+    }
+
     public void printStudentList(){
         studentView.sendListOnConsole(students.getStudentList());
     }
     public void printSortedStudentList(){
         studentView.sendListOnConsole(service.getSortedStudentGroupFSL());
     }
+    public void printStudent(Student student){
+        viewUser = new ViewUser(student);
+        viewUser.printUser();
+    }
 }
+
