@@ -1,11 +1,11 @@
 package Task_1.Service;
 
-import Task_1.Model.UniversityPerson;
+import Task_1.Model.User;
 
 import java.util.Comparator;
 
 //OSP
-public class UniversityPersonComparator<T extends UniversityPerson> implements Comparator<T> {
+public class UserComparator<T extends User> implements Comparator<T> {
     @Override
     public int compare(T o1, T o2) {
         int resultOfComparing = o1.getFirstName().compareTo(o2.getFirstName());
