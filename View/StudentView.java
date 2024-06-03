@@ -11,13 +11,10 @@ public class StudentView implements ListView<Student> {
 
 
     @Override
-    public void sendListOnConsole(List<Student> universityPersons) {
-        for (Student student: universityPersons){
+    public void sendListOnConsole(List<Student> users) {
+        for (Student student: users){
             System.out.println(student);
         }
 
     }
 }
-
-
-
