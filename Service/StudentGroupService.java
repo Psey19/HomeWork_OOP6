@@ -21,7 +21,7 @@ public class StudentGroupService {
     }
     public List<Student> getSortedStudentGroupFSL() {
         List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
-        studentList.sort(new UniversityPersonComparator<Student>());
+        studentList.sort(new UserComparator<Student>());
         return studentList;
     }
 }
