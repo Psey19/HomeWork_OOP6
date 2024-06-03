@@ -1,6 +1,6 @@
 package Task_1.Model;
 
-public class Student extends UniversityPerson implements Comparable<Student>{
+public class Student extends User implements Comparable<Student>{
     //выполнение OSP, поскольку мы здесь реализуем интерфейс Comparable
     private int studentId;
 
