@@ -1,14 +1,14 @@
 package Task_1.View;
 
-import Task_1.Model.UniversityPerson;
+import Task_1.Model.User;
 
 import java.util.List;
 //Здесь наглядно продемонстрирован принцип OSP,
 //Данный интерфейс реализует методы интерфейса ListView и расширяет его возможности новым методом
-interface UniversityPersonView<T extends UniversityPerson> extends ListView<T> {
+interface UserView<T extends User> extends ListView<T> {
     @Override
-    default void sendListOnConsole(List<T> universityPersons) {
+    default void sendListOnConsole(List<T> users) {
 
     }
-    public void sendSubject(UniversityPerson universityPerson);
+    public void sendSubject(User user);
 }
