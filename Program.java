@@ -16,10 +16,6 @@ public class Program {
         controller.printSortedStudentList();
         System.out.println("-----------------------------");
         controller.printStudent(controller.getStudent(3));
-
-
-
-
-
+        controller.getStudent(3).showPerson();
     }
 }
