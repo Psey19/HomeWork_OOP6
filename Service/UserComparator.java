@@ -4,7 +4,6 @@ import Task_1.Model.User;
 
 import java.util.Comparator;
 
-//OSP
 public class UserComparator<T extends User> implements Comparator<T> {
     @Override
     public int compare(T o1, T o2) {
