@@ -5,7 +5,6 @@ import Task_1.Model.Student;
 import java.util.Iterator;
 import java.util.List;
 
-//выполнение OSP, поскольку мы здесь реализуем интерфейс Iterator
 public class StudentGroupIterator implements Iterator<Student> {
     private List<Student> studentList;
     private int index = 0;
