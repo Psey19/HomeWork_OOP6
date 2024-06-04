@@ -1,7 +1,6 @@
 package Task_1.Model;
 
 public class Student extends User implements Comparable<Student>{
-    //выполнение OSP, поскольку мы здесь реализуем интерфейс Comparable
     private int studentId;
 
 
@@ -18,7 +17,8 @@ public class Student extends User implements Comparable<Student>{
 
     @Override
     public void showPerson() {
-        System.out.println("Student");
+        super.showPerson();
+        System.out.print(" - Student");
     }
 
     @Override
