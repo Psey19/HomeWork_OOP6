@@ -11,9 +11,6 @@ import Task_1.View.ViewUser;
 import java.util.ArrayList;
 
 public class StudentController implements UserController<Student> {
-    //Здесь наглядно продемонстрирован принцип OSP,
-//Данный класс реализует методы интерфейса UserController и расширяет его возможности новыми методами
-
 
     private StudentGroup students = new StudentGroup(new ArrayList<>());
     private StudentGroupService service = new StudentGroupService(students);
