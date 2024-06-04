@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public class StudentGroup implements Iterable<Student>{
-    //выполнение OSP, поскольку мы здесь реализуем интерфейс Iterable
+    
     private List<Student> studentList;
 
     public StudentGroup(List<Student> studentList) {
